@@ -29,7 +29,7 @@ function App() {
     [
       'dodo',
       'lolo',
-      'koko', 'koko', 'koko', 'koko','koko', 'koko', 'koko', 'koko',
+      'koko', 'changed name', 'koko', 'koko','koko', 'koko', 'koko', 'koko',
     ]
   return (
     <View style={styles.container}>
