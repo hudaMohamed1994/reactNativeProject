@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PropsWithChildren, useState } from 'react';
 import {
@@ -23,20 +22,28 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-function App() {
+function Home({ navigation }) {
   const [counter, setCounter] = useState(0)
   const list =
     [
-      'dodo',
-      'lolo',
-      'koko', 'name', 'changeName', 'koko','koko', 'koko', 'koko', 'koko',
+      'firstItem',
+      '',
+      'name3', 'name4', 'name5', 'name5', 'name5', 'name5', 'name5', 'name0',
     ]
   return (
     <View style={styles.container}>
+      <Text style={styles.header}>
+        this is our List ....
+      </Text>
       <FlatList
         data={list}
         renderItem={({ item }) => <Text style={styles.text} >this our data {item}</Text>}
       />
+      <Button
+        title="Learn More"
+        color="#841584"
+        onPress={() => navigation.navigate('DetailsScreen')}
+      ></Button>
     </View>);
 };
 const styles = StyleSheet.create({
@@ -46,10 +53,17 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
+    fontSize: 20,
+    alignItems: 'center',
+    fontFamily: 'Raleway-Italic',
+    margin: 10,
+    color: "#F08000"
+  },
+  header: {
     fontSize: 40,
     margin: 20,
     color: Colors.black
   }
 });
 
-export default App;
+export default Home;
